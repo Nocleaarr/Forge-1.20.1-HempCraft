@@ -11,8 +11,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, HempCraft.MOD_ID);
 
-    public static final RegistryObject<Item> Hemp_Item = ITEMS.register("hemp_item",
+    public static final RegistryObject<Item> HEMP_ITEM = ITEMS.register("hemp_item",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TARP_ITEM = ITEMS.register("tarp_item",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

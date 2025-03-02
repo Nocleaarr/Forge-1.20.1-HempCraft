@@ -45,7 +45,8 @@ public class HempCraft {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.Hemp_Item);
+            event.accept(ModItems.HEMP_ITEM);
+            event.accept(ModItems.TARP_ITEM);
         }
     }
 
