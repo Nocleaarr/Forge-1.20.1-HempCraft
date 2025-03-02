@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.noclear.hempcraft.item.ModCreativeModeTabs;
 import net.noclear.hempcraft.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,8 @@ public class HempCraft {
 
     public HempCraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
@@ -44,10 +47,7 @@ public class HempCraft {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.HEMP_ITEM);
-            event.accept(ModItems.TARP_ITEM);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

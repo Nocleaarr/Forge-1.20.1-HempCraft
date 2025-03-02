@@ -1,4 +1,6 @@
 {
   "item.hempcraft.hemp_item": "Hemp",
-  "item.hempcraft.tarp_item": "Tarp"
+  "item.hempcraft.tarp_item": "Tarp",
+
+  "creativetab.hemp_tab": "HempCraft"
 }
